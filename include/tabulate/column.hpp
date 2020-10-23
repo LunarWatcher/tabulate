@@ -91,6 +91,7 @@ private:
   // property and return the largest configured column width
   // This is used to ensure that all cells in a column are
   // aligned when printing the column
+public:
   size_t get_configured_width() {
     size_t result{0};
     for (size_t i = 0; i < size(); ++i) {
@@ -117,7 +118,7 @@ private:
     }
     return result;
   }
-
+private:
   // Returns padding_left + cell_contents.size() + padding_right
   // for a given cell in the column
   size_t get_cell_width(size_t cell_index) {
