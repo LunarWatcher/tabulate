@@ -137,6 +137,9 @@ private:
   size_t rows_{0};
   size_t cols_{0};
   std::shared_ptr<TableInternal> table_;
+public:
+  size_t getRows() { return rows_; }
+  size_t getColumns() { return cols_; }
 };
 
 inline std::ostream &operator<<(std::ostream &stream, const Table &table) {
